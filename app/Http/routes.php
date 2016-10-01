@@ -16,4 +16,11 @@ Route::get('/lista_download', ['uses' => 'ListaController@exporta']);
 
 Route::get('csv_bd', ['uses' => 'CsvToBd@index']);
 
-Route::get('test_db', ['uses' => 'TesteWhereData@index']);
+//V2Bus
+Route::get('secoes', ['uses' => 'ImportaSecaoV2Bus@index']);
+Route::get('upload-secao', ['uses' => 'ImportaSecaoV2Bus@upload']);
+Route::post('importa-secao', ['uses' => 'ImportaSecaoV2Bus@uploadPost']);
+
+Route::get('linhas', ['uses' => 'ImportaLinhaV2Bus@index']);
+Route::get('upload-linhas', ['uses' => 'ImportaLinhaV2Bus@upload']);
+Route::post('importa-linha', ['uses' => 'ImportaLinhaV2Bus@uploadPost']);
