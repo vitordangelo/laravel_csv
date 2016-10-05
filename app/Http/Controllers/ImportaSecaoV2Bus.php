@@ -36,7 +36,7 @@ class ImportaSecaoV2Bus extends Controller
         //  }
 
         foreach ($csv as $sessao) {
-            return $sessao;
+            //return $sessao;
             try {
                 DB::insert('insert into routes (lines_id, routes_id, origin, origin_latitude,origin_longitude, destination, destination_latitude, destination_longitude, price) values (?, ?, ?, ?, ?, ?, ?, ?, ?)', $sessao);
                 DB::commit();
